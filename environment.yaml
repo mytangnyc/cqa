@@ -1,0 +1,15 @@
+name: cqa
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - python-dateutil
+  - pytz
+  - seaborn
+  - sodapy
+  - streamlit

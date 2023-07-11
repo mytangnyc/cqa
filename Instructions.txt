@@ -1,0 +1,9 @@
+docker build -t cqa .
+
+docker run -it --privileged=true --cap-add=SYS_ADMIN -m 8192m -h cqa.local --name cqa -p 8080:8080 -v $PWD:/cqa cqa /bin/bash
+
+(Once container is built, docker start corp_bond_analysis; docker attach corp_bond_analysis)
+
+conda activate cqa
+
+jupyter-notebook --ip=0.0.0.0 --port=8080 --allow-root
